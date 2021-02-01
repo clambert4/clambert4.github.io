@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Securing Azure and Windows | Chris Lambert - Test</title><link href="/" rel="alternate"></link><link href="/feeds/test.atom.xml" rel="self"></link><id>/</id><updated>2020-10-09T00:00:00-04:00</updated><entry><title>Home</title><link href="/home.html" rel="alternate"></link><published>2020-10-09T00:00:00-04:00</published><updated>2020-10-09T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2020-10-09:/home.html</id><content type="html">&lt;h1&gt;I have created a Home page and hopefully an Archive.&lt;/h1&gt;
+&lt;p&gt;I added my new post to a new dir called 'home', creating the home link in the nav bar. 
+I added my old posts to an 'archive' dir to hopefully create a new archive locaiton.&lt;/p&gt;
+&lt;p&gt;to be continued...&lt;/p&gt;</content><category term="Test"></category><category term="Azure"></category></entry></feed>
