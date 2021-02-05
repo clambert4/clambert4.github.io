@@ -157,6 +157,10 @@ table th[class*="span"],
 #banner strong {display:block;}
 #banner h1 { font-size:3.25rem }
 
+.navbartitle {
+    color: white;
+}
+
 .no-touch .navbar ul li.active > a {
   
   background: #868d92;
