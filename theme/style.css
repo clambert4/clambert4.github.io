@@ -159,7 +159,8 @@ table th[class*="span"],
 
 .navbartitle {
     color: white;
-    font-size: 24px;
+    display:inline-block;
+    float: left;
 }
 
 .no-touch .navbar ul li.active > a {
