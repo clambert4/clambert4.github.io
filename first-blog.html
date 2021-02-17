@@ -69,10 +69,10 @@
                                    var url = window.location.href;
                                    var title = document.title;
                                    document.getElementById( "fb" ).href = 'https://www.facebook.com/sharer.php?u=' + url;
-                                   document.getElementById( "tw" ).href = 'https://twitter.com/intent/tweet?url=' + url;
-                                   document.getElementById( "li" ).href = 'https://www.linkedin.com/shareArticle?url=' + url;
+                                   document.getElementById( "tw" ).href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
+                                   document.getElementById( "li" ).href = 'https://www.linkedin.com/shareArticle?url=' + url + '&title=' + title;
                                    document.getElementById( "hn" ).href = 'https://news.ycombinator.com/submitlink?u=' + url + '&t=' + title;
-                                   document.getElementById( "rd" ).href = 'https://news.ycombinator.com/submitlink?u=' + url;
+                                   document.getElementById( "rd" ).href = 'https://news.ycombinator.com/submitlink?u=' + url + '&title=' + title;
                             </script>
                     </header>
 
