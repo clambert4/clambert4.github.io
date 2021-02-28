@@ -119,7 +119,7 @@ body {
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 640px) {
   /* Style adjustments for viewports that meet the condition */
   #sidebar {
     position: static;
