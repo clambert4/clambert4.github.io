@@ -37,7 +37,7 @@ body {
 #post-container {
   position: relative;
   margin-left: 27%;
-  max-width: 800px;
+  max-width: 640px;
   overflow-wrap: break-word; }
 
 #nav-links {
