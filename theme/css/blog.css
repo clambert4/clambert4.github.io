@@ -135,6 +135,10 @@ body {
   #post-list {
     padding: 0; }
 
+  #site-desc {
+    font-size: 1em;
+    margin: 1px; }
+
   #nav-links {
     text-align: center;
     padding: 0;
@@ -149,6 +153,10 @@ body {
     font-size: 1.3em;
     margin: 0.3em 0 .15em; }
 
+  #site-title h1 {
+    font-size: 1.3em;
+    margin: 0.1em 0px; }
+
   #site-header {
     text-align: center; }
 
@@ -158,18 +166,14 @@ body {
     box-shadow: 0 3px 12px 3px #8e927e; }
 
   .post-entry {
-    padding: 0 12px; } }
-@media only screen and (max-width: 800px) {
-  #nav-links {
-    font-size: 1em; }
-
-  #site-desc {
-    font-size: 1em;
-     margin: 1px;}
-
-  #site-title h1 {
-    font-size: 1.3em;
-    margin: 0.1em 0px; }
+    padding: 0 12px; }
 
   #site-info {
-    font-size: 0.6em; } }
+    font-size: 0.6em; }   }
+@media only screen and (max-width: 600px) {
+  #nav-links {
+    font-size: .7em;
+    margin: 0 10px 0 10px; }  }
+@media only screen and (max-width: 450px) {
+  #nav-links {
+    font-size: .5em; }   }
