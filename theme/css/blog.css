@@ -176,19 +176,39 @@ body {
   #nav-links li {
     margin: 1px; } }
 @media only screen and (max-width: 450px) {
-  #nav-links {
-    font-size: .5em; }   }
-@media only screen and (max-width: 380px) {
-  #nav-links{
-    font-size: .4em;}   }
-@media only screen and (max-width: 360px) {
-  #nav-links{
-    }
+   #nav-links{
+    font-size: .6em;}
     #nav-links a {
     padding: 0 20px;
     border-radius: 24px;
     display: inline-block;
-    border: 3px solid #eeeeee;
+    border: 2px solid #eeeeee;
+    line-height: 1.8em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }   }
+@media only screen and (max-width: 380px) {
+  #nav-links{
+    font-size: .6em;}
+    #nav-links a {
+    padding: 0 20px;
+    border-radius: 24px;
+    display: inline-block;
+    border: 2px solid #eeeeee;
+    line-height: 1.8em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }    }
+@media only screen and (max-width: 350px) {
+    #nav-links a {
+    padding: 0 15px;
+    border-radius: 24px;
+    display: inline-block;
+    border: 2px solid #eeeeee;
     line-height: 1.8em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
