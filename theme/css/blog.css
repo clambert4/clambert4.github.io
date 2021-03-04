@@ -115,10 +115,9 @@ body {
       color: #38c5c5; }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+   Media Queries for Responsive Design.
+      ========================================================================== */
+
 @media only screen and (max-width: 800px) {
   /* Style adjustments for viewports that meet the condition */
   #sidebar {
@@ -141,7 +140,7 @@ body {
 
   #nav-links {
     text-align: center;
-    padding: 0;
+    padding: 20px;
     font-size: 1em; }
     #nav-links li {
       display: inline;
@@ -170,12 +169,12 @@ body {
 
   #site-info {
     font-size: 0.6em; }   }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   #nav-links {
     font-size: .7em; }
   #nav-links li {
     margin: 1px; } }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 460px) {
    #nav-links{
     font-size: .6em;}
     #nav-links a {
@@ -189,11 +188,11 @@ body {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }   }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 390px) {
   #nav-links{
     font-size: .6em;}
     #nav-links a {
-    padding: 0 20px;
+    padding: 0 15px;
     border-radius: 24px;
     display: inline-block;
     border: 2px solid #eeeeee;
@@ -206,6 +205,32 @@ body {
 @media only screen and (max-width: 350px) {
     #nav-links a {
     padding: 0 15px;
+    border-radius: 24px;
+    display: inline-block;
+    border: 2px solid #eeeeee;
+    line-height: 1.8em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+    @media only screen and (max-width: 340px) {
+    #nav-links a {
+    padding: 0 10px;
+    border-radius: 24px;
+    display: inline-block;
+    border: 2px solid #eeeeee;
+    line-height: 1.8em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+    @media only screen and (max-width: 290px) {
+    #nav-links a {
+    padding: 0 5px;
     border-radius: 24px;
     display: inline-block;
     border: 2px solid #eeeeee;
