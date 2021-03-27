@@ -1,46 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chris Lambert</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2021-02-03T00:00:00-05:00</updated><subtitle>Cloud Security and DevOps</subtitle><entry><title>Fourth Post</title><link href="/fourth-post.html" rel="alternate"></link><published>2021-02-03T00:00:00-05:00</published><updated>2021-02-03T00:00:00-05:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2021-02-03:/fourth-post.html</id><summary type="html">&lt;h1&gt;Testing pagination.&lt;/h1&gt;
-&lt;p&gt;Lorem Ipsum
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Testing pagination.&lt;/h1&gt;
-&lt;p&gt;Lorem Ipsum
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor massa, hendrerit et aliquet at, dignissim a eros. Nulla lacus sapien, euismod quis rhoncus in, consequat ac lorem. Sed sit amet odio elementum, blandit eros at, iaculis lorem. Donec ullamcorper odio pellentesque elementum rhoncus. Morbi ornare tellus a eros fringilla mattis. Etiam eget neque semper, lacinia nunc eget, suscipit odio. Sed nisi nulla, molestie in condimentum ac, rutrum bibendum est. Sed cursus odio a dui aliquam, id tempor nibh venenatis. Nunc volutpat ante et faucibus maximus. Praesent sed mollis libero.&lt;/p&gt;
-&lt;p&gt;Vivamus ultrices feugiat consectetur. Integer volutpat sodales justo, eget scelerisque velit ultricies eget. Vivamus tristique risus ligula, vel ornare lectus rhoncus quis. Phasellus faucibus accumsan suscipit. Donec facilisis cursus lorem, vitae scelerisque sem ornare nec. Fusce sem dui, vulputate nec quam eget, maximus consequat est. Aenean ac lacinia justo, vitae volutpat justo. Sed sit amet euismod nunc, pharetra porttitor sem. Cras auctor pellentesque consectetur. Aliquam blandit tortor at fermentum placerat. Nullam lobortis velit vel odio ultrices dictum. In eleifend urna vitae ultricies varius.&lt;/p&gt;
-&lt;p&gt;In mattis, nulla eu sodales bibendum, lacus nibh blandit felis, non pulvinar enim tortor vel ante. Integer cursus sapien a interdum faucibus. Maecenas condimentum mi id enim lobortis, in tincidunt dolor commodo. Cras interdum, dolor sit amet rhoncus vestibulum, justo quam posuere lacus, et posuere lectus magna nec nibh. Proin scelerisque at mi a interdum. In sed tristique arcu. Maecenas tincidunt lobortis enim commodo molestie. Suspendisse eget viverra ipsum. Praesent sit amet lorem non ante tristique hendrerit. Etiam lobortis tortor massa, nec mollis leo posuere vitae. Morbi et maximus risus. Nam ut metus a arcu consequat faucibus. Donec quis ullamcorper enim, eu tempus lorem.&lt;/p&gt;
-&lt;p&gt;In a tincidunt lectus. Morbi sit amet quam eu quam vestibulum dictum. Vestibulum a accumsan turpis, ut sollicitudin arcu. Aliquam urna enim, elementum sed venenatis ac, consequat ac turpis. Ut ac tortor rhoncus, bibendum mi nec, faucibus massa. Praesent nec facilisis lacus. Sed sed neque sed libero aliquam aliquet at non eros. Nullam quis lectus nisi. In ac posuere orci. Donec nibh mi, fermentum eu enim ac, aliquam lacinia est. Aenean scelerisque risus ut quam mollis porttitor. Pellentesque rhoncus turpis consequat vestibulum ornare. Suspendisse ut justo quis dui efficitur lobortis.&lt;/p&gt;
-&lt;p&gt;In vulputate, nibh at vehicula suscipit, lectus lectus tempor nunc, et aliquet ex arcu non mi. Fusce pharetra vitae risus in congue. Nullam nisi erat, volutpat sodales tincidunt at, placerat a sapien. Duis vel dapibus elit. Curabitur efficitur a urna sit amet pharetra. Phasellus vehicula neque purus, eu euismod lacus condimentum cursus. Mauris eget pharetra sapien. Vivamus sapien nunc, tincidunt nec consequat volutpat, viverra non libero. Vivamus in ultricies nisl. Proin et imperdiet lectus.&lt;/p&gt;</content><category term="Azure"></category></entry><entry><title>Third Post</title><link href="/third-post.html" rel="alternate"></link><published>2020-10-09T00:00:00-04:00</published><updated>2020-10-09T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2020-10-09:/third-post.html</id><content type="html">&lt;h1&gt;I have created a Home page and hopefully an Archive.&lt;/h1&gt;
-&lt;p&gt;I added my new post to a new dir called 'home', creating the home link in the nav bar. 
-I added my old posts to an 'archive' dir to hopefully create a new archive locaiton.&lt;/p&gt;
-&lt;p&gt;to be continued...&lt;/p&gt;</content><category term="Azure"></category></entry><entry><title>Working with Configs and Organizing</title><link href="/working-with-configs-and-organizing.html" rel="alternate"></link><published>2020-10-09T00:00:00-04:00</published><updated>2020-10-09T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2020-10-09:/working-with-configs-and-organizing.html</id><content type="html">&lt;h1&gt;Creating a home page and an arhive section&lt;/h1&gt;
-&lt;p&gt;I made a new directory called archive. In there, I placed my first post. Then, I created a 
-second post on the home page. Lets see what it do. &lt;/p&gt;</content><category term="Scripting"></category></entry><entry><title>First Blog</title><link href="/first-blog.html" rel="alternate"></link><published>2020-10-08T00:00:00-04:00</published><updated>2020-10-08T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2020-10-08:/first-blog.html</id><summary type="html">&lt;h1&gt;This is the first blog post.... that will eventually be removed!&lt;/h1&gt;
-&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;
-&lt;p&gt;.
-.
-.
-.
-.
-.
-Some other content here&lt;/p&gt;
-&lt;p&gt;And then some more.&lt;/p&gt;
-&lt;p&gt;and some more …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;This is the first blog post.... that will eventually be removed!&lt;/h1&gt;
-&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;
-&lt;p&gt;.
-.
-.
-.
-.
-.
-Some other content here&lt;/p&gt;
-&lt;p&gt;And then some more.&lt;/p&gt;
-&lt;p&gt;and some more&lt;/p&gt;
-&lt;p&gt;and more&lt;/p&gt;
-&lt;p&gt;and more&lt;/p&gt;
-&lt;p&gt;and more&lt;/p&gt;</content><category term="Azure"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chris Lambert</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2021-03-27T00:00:00-04:00</updated><subtitle>Cloud Security and DevOps</subtitle><entry><title>Azure Tenant Obliteration</title><link href="/azure-tenant-obliteration.html" rel="alternate"></link><published>2021-03-27T00:00:00-04:00</published><updated>2021-03-27T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2021-03-27:/azure-tenant-obliteration.html</id><summary type="html">&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
+&lt;h4&gt;Your entire Azure tenant was just deleted.&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;A user assigned the Owner or Contributor roles on any or all subscriptions could run the following Powershell one-liner and destroy an entire cloud tenant in seconds, if the tenant owners did not take the necessary precautions. 
+&lt;br /&gt;&lt;code&gt;$subs = Get-AzSubscription
+foreach …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
+&lt;h4&gt;Your entire Azure tenant was just deleted.&lt;br /&gt;&lt;/h4&gt;
+&lt;p&gt;A user assigned the Owner or Contributor roles on any or all subscriptions could run the following Powershell one-liner and destroy an entire cloud tenant in seconds, if the tenant owners did not take the necessary precautions. 
+&lt;br /&gt;&lt;code&gt;$subs = Get-AzSubscription
+foreach($sub in $subs){
+    Set-AzContext -Subscription $sub.name
+    Get-AzResourceGroup | Remove-AzResourceGroup -Force
+}
+&lt;/code&gt;&lt;br /&gt; 
+This will loop through each subscription and return all resource groups, then subsequently delete them. Any subscription or resource group where the user has not been assigned the Contributor role will simply throw an error before continuing. Within a minute, depending on the number of subscriptions and resource groups, the resources living within these subscriptions will have been deleted. The Powershell command could be modified to include a second loop to return and delete all resources:
+&lt;code&gt;$subs = Get-AzSubscription
+foreach($sub in $subs){
+    Set-AzContext -Subscription $sub.name
+    Get-AzResourceGroup | Remove-AzResourceGroup -Force
+Get-AzResource | Remove-AzResource -Force
+}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will ensure that any resource in the Azure tenant the user has been granted Owner or Contributor to is deleted, even resources in resource groups where the user has limited permissions on the parent. Whether this was a malicious insider, external attacker, or a mistake, this is bad news bears. Hopefully, this organization has copies of deployment templates stored outside of the Azure tenant to speed up redeployment.
+This is not a huge shock as modern clouds are built on the concept of elasticity, meaning rapid provisioning and deprovisioning of cloud computing resources. Preferably, rapid deprovisioning would be done by the approved person at the appropriate time using reliable methods.&lt;/p&gt;
+&lt;h3&gt;Where things go wrong&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;The Azure resource hierarchy looks like this:&lt;br /&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Resource_Heirarchy" src="/images/resource_heirarchy.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;•   Management groups: These groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.&lt;br /&gt;
+•   Subscriptions: A subscription logically associates user accounts and the resources that were created by those user accounts. Each subscription has limits or quotas on the amount of resources you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.&lt;br /&gt;
+•   Resource groups: A resource group is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed.&lt;br /&gt;
+•   Resources: Resources are instances of services that you create, like virtual machines, storage, or SQL databases.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Azure utilizes inheritance to propagate role-based access controls (RBACs) down from the root tenant to management groups, subscriptions, resource groups and then resources. This means any permissions granted at the management group or subscription level are applied to all resource groups and resources within the management group or subscription. This is very useful as access management becomes more manageable, but organizations should plan out the tenant architecture with access management in mind. Azure allows for management groups with a parent-child relationship to achieve more granular control over access management. 
+Azure provides built-in roles, such as Owner, Contributor, User Access Administrator and Reader that can be applied at any level. Users or security principals granted Owner permission will have full control at the provided scope and every resource contained within. This includes permissions to create any object or delete any of its contents. Owners can also grant, modify, and delete access of other users. Contributor permissions can do everything that an Owner can do, except for modify user access to resources and remove management locks. User Access Administrators are the opposite. They can only modify access to resources and management locks but are unable to create, modify or delete resources. Readers can only see and use resources. 
+In addition to inheritance, Azure utilizes an additive model with access control, meaning a user’s effective permissions are the sum of that user’s role assignments. For example, if a security principal is granted the Contributor role of a subscription and User Access Administrator of a resource group, the security principal’s effective permissions for that resource group would be Contributor plus User Access Administrator. These roles combined are equivalent to the Owner role. In the diagram below, a user assigned the Contributor role at the subscription level and the Reader role at the resource group level. This equates to Contributor on the resource group because the Contributor role already includes all permissions that are added by the Reader role assignment. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Additive_Model" src="/images/addititive_model.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;While configuring new Azure environments, security principals are routinely given the Contributor role. Without fully understanding Azure’s additive access control model, organizations can get in trouble with the provided Powershell snippet above. Assume an organization has granted a user the Contributor role scoped to a single management group and that management group contains a few production subscriptions, with each subscription containing several resource groups populated with hundreds of resources. This Contributor can open a cloud shell, run the Powershell snippet and those resources are permanently deleted. Azure intends to empower its users in this way, but it also provides a host of services to help prevent this from happening undesirably. &lt;/p&gt;
+&lt;h3&gt;Resource Locks &lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;The first and most obvious solution is applying resource locks throughout the environment. There are two types of resource locks in Azure: CanNotDelete locks and ReadOnly locks. Delete locks prevent resources from deletion while read-only locks prevent resources from modification. Resource locks take advantage of inheritance by applying the locks at higher levels, like the subscription or management group level. All child resources will have the parent lock applied to it. The caveat to applying the locks at the higher level is the locks cannot be removed from individual child resources, they must be removed from the parent where they were assigned. It is recommended to use Powershell to assign resource locks at the resource group level. 
+&lt;br /&gt;&lt;code&gt;$ResourceGroupNames = (Get-AzResourceGroup).ResourceGroupName
+    foreach ($RG in $ResourceGroupNames) {
+        New-AzResourceLock -LockName ($RG + “-DeleteLock”) -ResourceGroupName $RG -LockLevel CanNotDelete -LockNotes “Resource Group Delete Lock” -Force
+    }&lt;/code&gt;
+This way, only the resource group resource lock requires removal if a resource needs deletion or modification, instead of the entire subscription or management group. Because only User Access Administrators and Owners can remove the locks, any attempt to delete the resources or the locks will result in an error. Even Owners will have to delete the locks before deleting the resources. This is a good start to preventing the intentional or accidental nuking of your entire infrastructure. Unfortunately, an Owner or User Access Administrator with Contributor roles can add the following code and the resource locks will be deleted, followed by the resource groups. 
+&lt;code&gt;$subs = Get-AzSubscription
+foreach($sub in $subs){
+    Set-AzContext -Subscription $sub.name
+    $rgs = Get-AzResourceGroup
+    Foreach($rg in $rgs){
+     Get-AzResourceLock | Where-Object ResourceGroupName -   eq $rg.ResourceGroupName | Remove-AzResourceLock -Force
+        Remove-AzResourceGroup
+    }
+}&lt;/code&gt; &lt;/p&gt;
+&lt;h3&gt;Least Privilege&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;Resource locks close the gap on Contributors and below, but there is still the risk of Owners deleting everything. The principle of least privilege states subjects must be allowed to access only the information and resources that are necessary for its legitimate purpose. If least privilege is followed, very few Owners, User Access Administrators and Contributors will exist throughout the environment. It is too easy to assign users Owner or Contributor access because these roles almost always have the necessary permissions, making them especially problematic. However, organizations should research the proper RBACs prior to assigning a role to a security principal. The Azure documentation will detail the required roles for any resource or service. For example, if a user needs to start and stop VMs, the user does not need Contributor access, the VM Operator role is sufficient. Restricting user accounts to the appropriate role and scope will go a long way in to protecting the cloud environment. 
+Privileged Identity Management
+For situations where a privileged role is necessary, Azure provides a service called Privileged Identity Management, or PIM. PIM controls access to sensitive resources while still allowing legitimate users to perform approved actions. PIM can assign Azure Roles to users, like Contributor or Owner, at a specific scope like a resource group or a VM. These assigned roles can be listed as eligible or active. Eligible requires the user assigned the role to perform a series of steps to activate the role. These steps involve opening the Privileged Identity Management blade, selecting Azure resource roles, and then eligible roles. At the end on the right, there will be options to Activate or Extend the role. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Activate_PIM" src="/images/activate_PIM.jpg"&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;When the user selects activate, they must provide a duration for the role to be activated and a reason for activating the role. &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Review_PIM" src="/images/review_PIM.jpg"&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Approvers are required with each role configured for PIM. When a user submits a PIM activation request, the approvers are notified, and the request is left pending until the approver responds. The approvers can review the information provided in the request and make the determination to deny or approve. Within PIM, users can configure access reviews as well. Here, administrators can schedule access reviews on a periodic basis and determine if assigned roles are still necessary.
+To prevent the destruction of all cloud resources using PIM, create managed Azure resource roles for all Owners, User Access Admins, and Contributors. The chosen scope for PIM roles depends on the preferences of the organization. The lower the scope, like at the resource group or resource level, will have significant management overhead but a granular view of access control. Applying PIM at this level could impact productivity, as users will have to wait for approval prior to performing their duties. The higher scope, at the management group or subscription level, will be much easier to manage but organizations will have to grant access to large groups of resources. Malicious users would need to request access to multiple parent resources simultaneously to obliterate the entire tenant. Combine PIM with least privilege and resource locks and this vulnerability is essentially mitigated.&lt;/p&gt;
+&lt;h3&gt;Take aways:&lt;/h3&gt;
+&lt;p&gt;•   Use least privilege&lt;br /&gt;
+•   No Contributor should also be assigned User Access Administrator&lt;br /&gt;
+•   Limit the number of Owners and Contributors throughout the tenant&lt;br /&gt;
+•   Assign the appropriate roles, do not assume Contributor is needed&lt;br /&gt;
+•   Configure Privileged Identity Management on Contributors, User Access Administrators and Owners&lt;br /&gt;
+•   Add Delete resource locks at the resource group level using Powershell&lt;br /&gt;&lt;/p&gt;</content><category term="Azure"></category></entry></feed>
