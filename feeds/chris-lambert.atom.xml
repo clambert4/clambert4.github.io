@@ -22,7 +22,7 @@ This will loop through each subscription and return all resource groups, then su
 &lt;span class="k"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sub&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$subs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
     &lt;span class="nb"&gt;Set-AzContext&lt;/span&gt; &lt;span class="n"&gt;-Subscription&lt;/span&gt; &lt;span class="nv"&gt;$sub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
     &lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResourceGroup&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
-&lt;span class="nb"&gt;Get-AzResource&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResource&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+    &lt;span class="nb"&gt;Get-AzResource&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResource&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -49,7 +49,8 @@ This is not a huge shock as modern clouds are built on the concept of elasticity
 &lt;br /&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$ResourceGroupNames&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;ResourceGroupName&lt;/span&gt;
     &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$ResourceGroupNames&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nb"&gt;New-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-LockName&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-DeleteLock&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;-ResourceGroupName&lt;/span&gt; &lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="n"&gt;-LockLevel&lt;/span&gt; &lt;span class="n"&gt;CanNotDelete&lt;/span&gt; &lt;span class="n"&gt;-LockNotes&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Resource Group Delete Lock&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+        &lt;span class="nb"&gt;New-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-LockName&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-DeleteLock&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;-ResourceGroupName&lt;/span&gt; &lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="n"&gt;-LockLevel&lt;/span&gt; &lt;span class="n"&gt;CanNotDelete&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+        &lt;span class="n"&gt;-LockNotes&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Resource Group Delete Lock&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -61,7 +62,8 @@ This way, only the resource group resource lock requires removal if a resource n
     &lt;span class="nb"&gt;Set-AzContext&lt;/span&gt; &lt;span class="n"&gt;-Subscription&lt;/span&gt; &lt;span class="nv"&gt;$sub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
     &lt;span class="nv"&gt;$rgs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt;
     &lt;span class="k"&gt;Foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$rg&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$rgs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-        &lt;span class="nb"&gt;Get-AzResourceLock&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Where-Object&lt;/span&gt; &lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="o"&gt;-eq&lt;/span&gt; &lt;span class="nv"&gt;$rg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+        &lt;span class="nb"&gt;Get-AzResourceLock&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Where-Object&lt;/span&gt; &lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="o"&gt;-eq&lt;/span&gt; &lt;span class="nv"&gt;$rg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+        &lt;span class="nb"&gt;Remove-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
         &lt;span class="nb"&gt;Remove-AzResourceGroup&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
