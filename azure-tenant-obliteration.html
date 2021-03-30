@@ -118,7 +118,8 @@ This is not a huge shock as modern clouds are built on the concept of elasticity
 <br /></p>
 <div class="highlight"><pre><span></span><span class="nv">$ResourceGroupNames</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-AzResourceGroup</span><span class="p">).</span><span class="n">ResourceGroupName</span>
     <span class="k">foreach</span> <span class="p">(</span><span class="nv">$RG</span> <span class="k">in</span> <span class="nv">$ResourceGroupNames</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">New-AzResourceLock</span> <span class="n">-LockName</span> <span class="p">(</span><span class="nv">$RG</span> <span class="p">+</span> <span class="s1">&#39;-DeleteLock&#39;</span><span class="p">)</span> <span class="n">-ResourceGroupName</span> <span class="nv">$RG</span> <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="p">`</span>
+        <span class="nb">New-AzResourceLock</span> <span class="n">-LockName</span> <span class="p">(</span><span class="nv">$RG</span> <span class="p">+</span> <span class="s1">&#39;-DeleteLock&#39;</span><span class="p">)</span> <span class="n">-ResourceGroupName</span> <span class="nv">$RG</span> <span class="p">`</span>
+        <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="p">`</span>
         <span class="n">-LockNotes</span> <span class="s1">&#39;Resource Group Delete Lock&#39;</span> <span class="n">-Force</span>
     <span class="p">}</span>
 </pre></div>
