@@ -118,7 +118,7 @@ This is not a huge shock as modern clouds are built on the concept of elasticity
 <br /></p>
 <div class="highlight"><pre><span></span><span class="nv">$ResourceGroupNames</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-AzResourceGroup</span><span class="p">).</span><span class="n">ResourceGroupName</span>
     <span class="k">foreach</span> <span class="p">(</span><span class="nv">$RG</span> <span class="k">in</span> <span class="nv">$ResourceGroupNames</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">New-AzResourceLock</span> <span class="n">-LockName</span> <span class="p">(</span><span class="nv">$RG</span> <span class="p">+</span> <span class="err">“</span><span class="n">-DeleteLock</span><span class="err">”</span><span class="p">)</span> <span class="n">-ResourceGroupName</span> <span class="nv">$RG</span> <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="n">-LockNotes</span> <span class="err">“</span><span class="n">Resource</span> <span class="nb">Group </span><span class="n">Delete</span> <span class="n">Lock</span><span class="err">”</span> <span class="n">-Force</span>
+        <span class="nb">New-AzResourceLock</span> <span class="n">-LockName</span> <span class="p">(</span><span class="nv">$RG</span> <span class="p">+</span> <span class="s1">&#39;-DeleteLock&#39;</span><span class="p">)</span> <span class="n">-ResourceGroupName</span> <span class="nv">$RG</span> <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="n">-LockNotes</span> <span class="s1">&#39;Resource Group Delete Lock&#39;</span> <span class="n">-Force</span>
     <span class="p">}</span>
 </pre></div>
 
@@ -130,7 +130,7 @@ This way, only the resource group resource lock requires removal if a resource n
     <span class="nb">Set-AzContext</span> <span class="n">-Subscription</span> <span class="nv">$sub</span><span class="p">.</span><span class="n">name</span>
     <span class="nv">$rgs</span> <span class="p">=</span> <span class="nb">Get-AzResourceGroup</span>
     <span class="k">Foreach</span><span class="p">(</span><span class="nv">$rg</span> <span class="k">in</span> <span class="nv">$rgs</span><span class="p">){</span>
-        <span class="nb">Get-AzResourceLock</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">ResourceGroupName</span> <span class="p">-</span>   <span class="n">eq</span> <span class="nv">$rg</span><span class="p">.</span><span class="n">ResourceGroupName</span> <span class="p">|</span> <span class="nb">Remove-AzResourceLock</span> <span class="n">-Force</span>
+        <span class="nb">Get-AzResourceLock</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">ResourceGroupName</span> <span class="o">-eq</span> <span class="nv">$rg</span><span class="p">.</span><span class="n">ResourceGroupName</span> <span class="p">|</span> <span class="nb">Remove-AzResourceLock</span> <span class="n">-Force</span>
         <span class="nb">Remove-AzResourceGroup</span>
     <span class="p">}</span>
 <span class="p">}</span>
