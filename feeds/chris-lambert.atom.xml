@@ -2,66 +2,91 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Chris Lambert - Chris Lambert</title><link href="/" rel="alternate"></link><link href="/feeds/chris-lambert.atom.xml" rel="self"></link><id>/</id><updated>2021-03-27T00:00:00-04:00</updated><subtitle>Cloud Security and DevOps</subtitle><entry><title>Azure Tenant Obliteration</title><link href="/azure-tenant-obliteration.html" rel="alternate"></link><published>2021-03-27T00:00:00-04:00</published><updated>2021-03-27T00:00:00-04:00</updated><author><name>Chris Lambert</name></author><id>tag:None,2021-03-27:/azure-tenant-obliteration.html</id><summary type="html">&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
 &lt;h4&gt;Your entire Azure tenant was just deleted.&lt;br /&gt;&lt;/h4&gt;
 &lt;p&gt;A user assigned the Owner or Contributor roles on any or all subscriptions could run the following Powershell one-liner and destroy an entire cloud tenant in seconds, if the tenant owners did not take the necessary precautions. 
-&lt;br /&gt;&lt;code&gt;$subs = Get-AzSubscription
-foreach …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$subs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzSubscription&lt;/span&gt;
+&lt;span class="k"&gt;foreach …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
 &lt;h4&gt;Your entire Azure tenant was just deleted.&lt;br /&gt;&lt;/h4&gt;
 &lt;p&gt;A user assigned the Owner or Contributor roles on any or all subscriptions could run the following Powershell one-liner and destroy an entire cloud tenant in seconds, if the tenant owners did not take the necessary precautions. 
-&lt;br /&gt;&lt;code&gt;$subs = Get-AzSubscription
-foreach($sub in $subs){
-    Set-AzContext -Subscription $sub.name
-    Get-AzResourceGroup | Remove-AzResourceGroup -Force
-}
-&lt;/code&gt;&lt;br /&gt; 
-This will loop through each subscription and return all resource groups, then subsequently delete them. Any subscription or resource group where the user has not been assigned the Contributor role will simply throw an error before continuing. Within a minute, depending on the number of subscriptions and resource groups, the resources living within these subscriptions will have been deleted. The Powershell command could be modified to include a second loop to return and delete all resources:
-&lt;code&gt;$subs = Get-AzSubscription
-foreach($sub in $subs){
-    Set-AzContext -Subscription $sub.name
-    Get-AzResourceGroup | Remove-AzResourceGroup -Force
-Get-AzResource | Remove-AzResource -Force
-}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This will ensure that any resource in the Azure tenant the user has been granted Owner or Contributor to is deleted, even resources in resource groups where the user has limited permissions on the parent. Whether this was a malicious insider, external attacker, or a mistake, this is bad news bears. Hopefully, this organization has copies of deployment templates stored outside of the Azure tenant to speed up redeployment.
+&lt;br /&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$subs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzSubscription&lt;/span&gt;
+&lt;span class="k"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sub&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$subs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="nb"&gt;Set-AzContext&lt;/span&gt; &lt;span class="n"&gt;-Subscription&lt;/span&gt; &lt;span class="nv"&gt;$sub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
+    &lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResourceGroup&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt; 
+This will loop through each subscription and return all resource groups, then subsequently delete them. Any subscription or resource group where the user has not been assigned the Contributor role will simply throw an error before continuing. Within a minute, depending on the number of subscriptions and resource groups, the resources living within these subscriptions will have been deleted. The Powershell command could be modified to include a second loop to return and delete all resources:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$subs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzSubscription&lt;/span&gt;
+&lt;span class="k"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sub&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$subs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="nb"&gt;Set-AzContext&lt;/span&gt; &lt;span class="n"&gt;-Subscription&lt;/span&gt; &lt;span class="nv"&gt;$sub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
+    &lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResourceGroup&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+&lt;span class="nb"&gt;Get-AzResource&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResource&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt;
+This will ensure that any resource in the Azure tenant the user has been granted Owner or Contributor to is deleted, even resources in resource groups where the user has limited permissions on the parent. Whether this was a malicious insider, external attacker, or a mistake, this is bad news bears. Hopefully, this organization has copies of deployment templates stored outside of the Azure tenant to speed up redeployment.
 This is not a huge shock as modern clouds are built on the concept of elasticity, meaning rapid provisioning and deprovisioning of cloud computing resources. Preferably, rapid deprovisioning would be done by the approved person at the appropriate time using reliable methods.&lt;/p&gt;
 &lt;h3&gt;Where things go wrong&lt;br /&gt;&lt;/h3&gt;
 &lt;p&gt;The Azure resource hierarchy looks like this:&lt;br /&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Resource_Heirarchy" src="/images/_resource_heirarchy.png"&gt;&lt;/p&gt;
-&lt;p&gt;•   Management groups: These groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.&lt;br /&gt;
-•   Subscriptions: A subscription logically associates user accounts and the resources that were created by those user accounts. Each subscription has limits or quotas on the amount of resources you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.&lt;br /&gt;
-•   Resource groups: A resource group is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed.&lt;br /&gt;
-•   Resources: Resources are instances of services that you create, like virtual machines, storage, or SQL databases.&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Management groups: These groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Subscriptions: A subscription logically associates user accounts and the resources that were created by those user accounts. Each subscription has limits or quotas on the amount of resources you can create and use. Organizations can use subscriptions to manage costs and the resources that are created by users, teams, or projects.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Resource groups: A resource group is a logical container into which Azure resources like web apps, databases, and storage accounts are deployed and managed.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Resources: Resources are instances of services that you create, like virtual machines, storage, or SQL databases.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Azure utilizes inheritance to propagate role-based access controls (RBACs) down from the root tenant to management groups, subscriptions, resource groups and then resources. This means any permissions granted at the management group or subscription level are applied to all resource groups and resources within the management group or subscription. This is very useful as access management becomes more manageable, but organizations should plan out the tenant architecture with access management in mind. Azure allows for management groups with a parent-child relationship to achieve more granular control over access management. 
-Azure provides built-in roles, such as Owner, Contributor, User Access Administrator and Reader that can be applied at any level. Users or security principals granted Owner permission will have full control at the provided scope and every resource contained within. This includes permissions to create any object or delete any of its contents. Owners can also grant, modify, and delete access of other users. Contributor permissions can do everything that an Owner can do, except for modify user access to resources and remove management locks. User Access Administrators are the opposite. They can only modify access to resources and management locks but are unable to create, modify or delete resources. Readers can only see and use resources. 
-In addition to inheritance, Azure utilizes an additive model with access control, meaning a user’s effective permissions are the sum of that user’s role assignments. For example, if a security principal is granted the Contributor role of a subscription and User Access Administrator of a resource group, the security principal’s effective permissions for that resource group would be Contributor plus User Access Administrator. These roles combined are equivalent to the Owner role. In the diagram below, a user assigned the Contributor role at the subscription level and the Reader role at the resource group level. This equates to Contributor on the resource group because the Contributor role already includes all permissions that are added by the Reader role assignment. &lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;Azure provides built-in roles, such as Owner, Contributor, User Access Administrator and Reader that can be applied at any level. Users or security principals granted Owner permission will have full control at the provided scope and every resource contained within. This includes permissions to create any object or delete any of its contents. Owners can also grant, modify, and delete access of other users. Contributor permissions can do everything that an Owner can do, except for modify user access to resources and remove management locks. User Access Administrators are the opposite. They can only modify access to resources and management locks but are unable to create, modify or delete resources. Readers can only see and use resources. 
+&lt;br /&gt;&lt;br /&gt;In addition to inheritance, Azure utilizes an additive model with access control, meaning a user’s effective permissions are the sum of that user’s role assignments. For example, if a security principal is granted the Contributor role of a subscription and User Access Administrator of a resource group, the security principal’s effective permissions for that resource group would be Contributor plus User Access Administrator. These roles combined are equivalent to the Owner role. In the diagram below, a user assigned the Contributor role at the subscription level and the Reader role at the resource group level. This equates to Contributor on the resource group because the Contributor role already includes all permissions that are added by the Reader role assignment. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Additive_Model" src="/images/_addititive_model.png"&gt;&lt;/p&gt;
 &lt;p&gt;While configuring new Azure environments, security principals are routinely given the Contributor role. Without fully understanding Azure’s additive access control model, organizations can get in trouble with the provided Powershell snippet above. Assume an organization has granted a user the Contributor role scoped to a single management group and that management group contains a few production subscriptions, with each subscription containing several resource groups populated with hundreds of resources. This Contributor can open a cloud shell, run the Powershell snippet and those resources are permanently deleted. Azure intends to empower its users in this way, but it also provides a host of services to help prevent this from happening undesirably. &lt;/p&gt;
 &lt;h3&gt;Resource Locks &lt;br /&gt;&lt;/h3&gt;
 &lt;p&gt;The first and most obvious solution is applying resource locks throughout the environment. There are two types of resource locks in Azure: CanNotDelete locks and ReadOnly locks. Delete locks prevent resources from deletion while read-only locks prevent resources from modification. Resource locks take advantage of inheritance by applying the locks at higher levels, like the subscription or management group level. All child resources will have the parent lock applied to it. The caveat to applying the locks at the higher level is the locks cannot be removed from individual child resources, they must be removed from the parent where they were assigned. It is recommended to use Powershell to assign resource locks at the resource group level. 
-&lt;br /&gt;&lt;code&gt;$ResourceGroupNames = (Get-AzResourceGroup).ResourceGroupName
-    foreach ($RG in $ResourceGroupNames) {
-        New-AzResourceLock -LockName ($RG + “-DeleteLock”) -ResourceGroupName $RG -LockLevel CanNotDelete -LockNotes “Resource Group Delete Lock” -Force
-    }&lt;/code&gt;
-This way, only the resource group resource lock requires removal if a resource needs deletion or modification, instead of the entire subscription or management group. Because only User Access Administrators and Owners can remove the locks, any attempt to delete the resources or the locks will result in an error. Even Owners will have to delete the locks before deleting the resources. This is a good start to preventing the intentional or accidental nuking of your entire infrastructure. Unfortunately, an Owner or User Access Administrator with Contributor roles can add the following code and the resource locks will be deleted, followed by the resource groups. 
-&lt;code&gt;$subs = Get-AzSubscription
-foreach($sub in $subs){
-    Set-AzContext -Subscription $sub.name
-    $rgs = Get-AzResourceGroup
-    Foreach($rg in $rgs){
-     Get-AzResourceLock | Where-Object ResourceGroupName -   eq $rg.ResourceGroupName | Remove-AzResourceLock -Force
-        Remove-AzResourceGroup
-    }
-}&lt;/code&gt; &lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$ResourceGroupNames&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;ResourceGroupName&lt;/span&gt;
+    &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$ResourceGroupNames&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nb"&gt;New-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-LockName&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;-DeleteLock&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;-ResourceGroupName&lt;/span&gt; &lt;span class="nv"&gt;$RG&lt;/span&gt; &lt;span class="n"&gt;-LockLevel&lt;/span&gt; &lt;span class="n"&gt;CanNotDelete&lt;/span&gt; &lt;span class="n"&gt;-LockNotes&lt;/span&gt; &lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;Resource&lt;/span&gt; &lt;span class="nb"&gt;Group &lt;/span&gt;&lt;span class="n"&gt;Delete&lt;/span&gt; &lt;span class="n"&gt;Lock&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt;
+This way, only the resource group resource lock requires removal if a resource needs deletion or modification, instead of the entire subscription or management group. Because only User Access Administrators and Owners can remove the locks, any attempt to delete the resources or the locks will result in an error. Even Owners will have to delete the locks before deleting the resources. This is a good start to preventing the intentional or accidental nuking of your entire infrastructure. Unfortunately, an Owner or User Access Administrator with Contributor roles can add the following code and the resource locks will be deleted, followed by the resource groups. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$subs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzSubscription&lt;/span&gt;
+&lt;span class="k"&gt;foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sub&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$subs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="nb"&gt;Set-AzContext&lt;/span&gt; &lt;span class="n"&gt;-Subscription&lt;/span&gt; &lt;span class="nv"&gt;$sub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
+    &lt;span class="nv"&gt;$rgs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzResourceGroup&lt;/span&gt;
+    &lt;span class="k"&gt;Foreach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$rg&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$rgs&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="nb"&gt;Get-AzResourceLock&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Where-Object&lt;/span&gt; &lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;   &lt;span class="n"&gt;eq&lt;/span&gt; &lt;span class="nv"&gt;$rg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResourceGroupName&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Remove-AzResourceLock&lt;/span&gt; &lt;span class="n"&gt;-Force&lt;/span&gt;
+        &lt;span class="nb"&gt;Remove-AzResourceGroup&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3&gt;Least Privilege&lt;br /&gt;&lt;/h3&gt;
 &lt;p&gt;Resource locks close the gap on Contributors and below, but there is still the risk of Owners deleting everything. The principle of least privilege states subjects must be allowed to access only the information and resources that are necessary for its legitimate purpose. If least privilege is followed, very few Owners, User Access Administrators and Contributors will exist throughout the environment. It is too easy to assign users Owner or Contributor access because these roles almost always have the necessary permissions, making them especially problematic. However, organizations should research the proper RBACs prior to assigning a role to a security principal. The Azure documentation will detail the required roles for any resource or service. For example, if a user needs to start and stop VMs, the user does not need Contributor access, the VM Operator role is sufficient. Restricting user accounts to the appropriate role and scope will go a long way in to protecting the cloud environment. 
-Privileged Identity Management
-For situations where a privileged role is necessary, Azure provides a service called Privileged Identity Management, or PIM. PIM controls access to sensitive resources while still allowing legitimate users to perform approved actions. PIM can assign Azure Roles to users, like Contributor or Owner, at a specific scope like a resource group or a VM. These assigned roles can be listed as eligible or active. Eligible requires the user assigned the role to perform a series of steps to activate the role. These steps involve opening the Privileged Identity Management blade, selecting Azure resource roles, and then eligible roles. At the end on the right, there will be options to Activate or Extend the role. &lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Privileged Identity Management&lt;/h3&gt;
+&lt;p&gt;For situations where a privileged role is necessary, Azure provides a service called Privileged Identity Management, or PIM. PIM controls access to sensitive resources while still allowing legitimate users to perform approved actions. PIM can assign Azure Roles to users, like Contributor or Owner, at a specific scope like a resource group or a VM. These assigned roles can be listed as eligible or active. Eligible requires the user assigned the role to perform a series of steps to activate the role. These steps involve opening the Privileged Identity Management blade, selecting Azure resource roles, and then eligible roles. At the end on the right, there will be options to Activate or Extend the role. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Activate_PIM" src="/images/_activate_pim.png"&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;When the user selects activate, they must provide a duration for the role to be activated and a reason for activating the role. &lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Review_PIM" src="/images/_review_pim.png"&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;Approvers are required with each role configured for PIM. When a user submits a PIM activation request, the approvers are notified, and the request is left pending until the approver responds. The approvers can review the information provided in the request and make the determination to deny or approve. Within PIM, users can configure access reviews as well. Here, administrators can schedule access reviews on a periodic basis and determine if assigned roles are still necessary.
+&lt;br /&gt;
+&lt;br /&gt;
 To prevent the destruction of all cloud resources using PIM, create managed Azure resource roles for all Owners, User Access Admins, and Contributors. The chosen scope for PIM roles depends on the preferences of the organization. The lower the scope, like at the resource group or resource level, will have significant management overhead but a granular view of access control. Applying PIM at this level could impact productivity, as users will have to wait for approval prior to performing their duties. The higher scope, at the management group or subscription level, will be much easier to manage but organizations will have to grant access to large groups of resources. Malicious users would need to request access to multiple parent resources simultaneously to obliterate the entire tenant. Combine PIM with least privilege and resource locks and this vulnerability is essentially mitigated.&lt;/p&gt;
 &lt;h3&gt;Take aways:&lt;/h3&gt;
-&lt;p&gt;•   Use least privilege&lt;br /&gt;
-•   No Contributor should also be assigned User Access Administrator&lt;br /&gt;
-•   Limit the number of Owners and Contributors throughout the tenant&lt;br /&gt;
-•   Assign the appropriate roles, do not assume Contributor is needed&lt;br /&gt;
-•   Configure Privileged Identity Management on Contributors, User Access Administrators and Owners&lt;br /&gt;
-•   Add Delete resource locks at the resource group level using Powershell&lt;br /&gt;&lt;/p&gt;</content><category term="Azure"></category></entry></feed>
+&lt;ul&gt;
+&lt;li&gt;Use least privilege&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;No Contributor should also be assigned User Access Administrator&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Limit the number of Owners and Contributors throughout the tenant&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Assign the appropriate roles, do not assume Contributor is needed&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Configure Privileged Identity Management on Contributors, User Access Administrators and Owners&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Add Delete resource locks at the resource group level using Powershell&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Azure"></category></entry></feed>

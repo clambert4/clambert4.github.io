@@ -2,5 +2,6 @@
 <rss version="2.0"><channel><title>Chris Lambert - Chris Lambert</title><link>/</link><description>Cloud Security and DevOps</description><lastBuildDate>Sat, 27 Mar 2021 00:00:00 -0400</lastBuildDate><item><title>Azure Tenant Obliteration</title><link>/azure-tenant-obliteration.html</link><description>&lt;h1&gt;Azure Tenant Obliteration&lt;/h1&gt;
 &lt;h4&gt;Your entire Azure tenant was just deleted.&lt;br /&gt;&lt;/h4&gt;
 &lt;p&gt;A user assigned the Owner or Contributor roles on any or all subscriptions could run the following Powershell one-liner and destroy an entire cloud tenant in seconds, if the tenant owners did not take the necessary precautions. 
-&lt;br /&gt;&lt;code&gt;$subs = Get-AzSubscription
-foreach …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris Lambert</dc:creator><pubDate>Sat, 27 Mar 2021 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:None,2021-03-27:/azure-tenant-obliteration.html</guid><category>Azure</category></item></channel></rss>
+&lt;br /&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$subs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;Get-AzSubscription&lt;/span&gt;
+&lt;span class="k"&gt;foreach …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris Lambert</dc:creator><pubDate>Sat, 27 Mar 2021 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:None,2021-03-27:/azure-tenant-obliteration.html</guid><category>Azure</category></item></channel></rss>
