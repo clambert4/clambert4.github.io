@@ -7,7 +7,8 @@
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --bg-light: #f9fafb;
-  --bg-white: #ffffff;
+  --bg-white: rgba(255, 255, 255, 0.92);
+  --bg-sidebar: rgba(255, 255, 255, 0.88);
   --border-color: #e5e7eb;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -36,7 +37,7 @@ body {
 
 /* Modern Sidebar */
 #sidebar {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-sidebar);
   backdrop-filter: blur(10px);
   position: fixed;
   left: 0;
@@ -46,7 +47,7 @@ body {
   padding: 2rem 1.5rem;
   color: var(--text-dark);
   box-shadow: var(--shadow-xl);
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
   overflow-y: auto;
 }
@@ -135,12 +136,13 @@ body {
 /* Modern Post Cards */
 .post-entry {
   background: var(--bg-white);
+  backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-lg);
   transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .post-entry:hover {
@@ -288,9 +290,11 @@ body {
   font-weight: 600;
   color: var(--text-dark);
   background: var(--bg-white);
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   box-shadow: var(--shadow-md);
   margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .paginator a {
@@ -314,8 +318,10 @@ body {
   font-size: 0.875rem;
   color: var(--text-light);
   background: var(--bg-white);
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #site-info a {
