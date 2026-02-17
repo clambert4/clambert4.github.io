@@ -1,16 +1,16 @@
 /* Modern UI Update for Chris Lambert's Site */
 
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary-color: #8b5cf6;
+  --primary-hover: #7c3aed;
   --secondary-color: #38c5c5;
   --text-dark: #1f2937;
   --text-light: #9ca3af;
   --text-on-dark: #e5e7eb;
   --bg-light: #f9fafb;
-  --bg-white: rgba(30, 27, 75, 0.85);
-  --bg-sidebar: rgba(20, 18, 50, 0.90);
-  --bg-card: rgba(30, 27, 75, 0.75);
+  --bg-white: rgba(17, 17, 27, 0.95);
+  --bg-sidebar: rgba(10, 10, 15, 0.95);
+  --bg-card: rgba(20, 20, 30, 0.90);
   --border-color: rgba(139, 92, 246, 0.3);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
