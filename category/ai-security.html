@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Chris Lambert</title>
+        <title>Chris Lambert - AI Security</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
             <link rel="stylesheet" href="/theme/css/normalize.css">
@@ -14,7 +14,6 @@
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="/theme/css/main.css">
-
     <link rel="stylesheet" href="/theme/css/blog.css">
     <link rel="stylesheet" href="/theme/css/github.css">
     <link rel="stylesheet" href="/theme/css/modern.css?v=3">
@@ -26,13 +25,11 @@
         <link rel="manifest" href="/site.webmanifest">
         <script src="/theme/js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H3CGC9N2QP"></script>
         <script>
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
               gtag('config', 'G-H3CGC9N2QP');
         </script>
     </head>
@@ -44,7 +41,7 @@
         <div id="wrapper">
 <header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=""><h2>Chris Lambert</h2></a>
+        <a id="site-title" href="/"><h2>Chris Lambert</h2></a>
         <p id="site-desc"> AI Security & Data Protection </p>
     </hgroup>
     <nav>
@@ -56,7 +53,6 @@
                 <li><a href="/feeds/all.atom.xml">Feed</a></li>
         </ul>
     </nav>
-
 </header>
     <div id="post-container">
         <ol id="post-list">
@@ -70,8 +66,6 @@
                     </header>
                     <section class="post-content">
                         <p>Last month, a popular AI chat application exposed over 300 million messages tied to roughly 25 million users. What stands out is not just the scale of the leak but the nature of the data itself, which included full conversations, timestamps, model selections, and in many cases deeply personal or sensitive content that users clearly assumed would remain private.</p>
-                        <p>The root cause was not a sophisticated attack or some novel vulnerability, but a misconfigured database. That is both unsurprising and deeply concerning because it highlights how fragile the current AI application stack really is.</p>
-                        <p>This is not a future problem that might emerge as adoption grows. It is a present reality that is already playing out across the industry.</p>
                         <p><a class="readmore" href="/ai-security-problem-already-here.html">read more</a></p>
                     </section>
                 </article>
@@ -85,13 +79,12 @@
                         <a href="/why-traditional-dlp-fails-llms.html" rel="bookmark"><h1>Why Traditional DLP Fails in the Age of LLMs</h1></a>
                     </header>
                     <section class="post-content">
-                        <p>Enterprise security teams have spent more than a decade refining data loss prevention. We built policies around file movement. We tuned alerts around email exfiltration. We monitored endpoints, USB devices, cloud storage, and outbound gateways. The assumption was consistent. Sensitive data moves in recognizable ways, through defined channels, and can be inspected before it leaves the organization.</p>
-                        <p>Large language models break that assumption.</p>
-                        <p>The conversation around enterprise AI risk tends to focus on outputs. Hallucinations. Bias. Toxicity. Model safety. These are real issues, especially in customer facing systems. But inside the enterprise, the more immediate risk sits on the input side. What employees are feeding into these systems matters far more than what the model generates in return.</p>
+                        <p>Enterprise security teams have spent more than a decade refining data loss prevention. We built policies around file movement. We tuned alerts around email exfiltration. Traditional DLP was not designed for conversational AI.</p>
                         <p><a class="readmore" href="/why-traditional-dlp-fails-llms.html">read more</a></p>
                     </section>
                 </article>
             </li>
+            <hr/>
         </ol>
         <div class="paginator">
             Page 1 / 1
@@ -100,8 +93,8 @@
     <p>
         &copy; Chris Lambert <script async>document.write( new Date().getFullYear() );</script>. All rights reserved.
     </p>
-
-</footer>    </div>
+</footer>
+    </div>
         </div>
 
 <script>
